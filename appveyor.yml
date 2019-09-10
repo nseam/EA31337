@@ -12,7 +12,6 @@ install:
 before_test:
 - git submodule update --init
 - shellcheck --version
-- ruby --version
 #- echo ^#define %MODE% >> src/include/EA31337/ea-mode.mqh
 test_script:
 - ps: Get-ChildItem -File scripts | Foreach {shellcheck $_.fullname}
