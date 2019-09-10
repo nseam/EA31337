@@ -13,6 +13,7 @@ environment:
   - MODE: __trace__
   - MODE: __experimental__
 init:
+- ps: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
 - ps: iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 install:
 - appveyor DownloadFile https://github.com/EA31337/MetaEditor/raw/master/metaeditor64.exe
