@@ -4,8 +4,7 @@ init:
 - ps: Set-ExecutionPolicy "RemoteSigned" -Scope Process -Confirm:$false
 - ps: Set-ExecutionPolicy "RemoteSigned" -Scope CurrentUser -Confirm:$false
 - ps: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
-- scoop
-- ps: if (Get-Command scoop  -errorAction SilentlyContinue) { echo "Scoop already installed, skipping." } else { iex (new-object net.webclient).downloadstring('https://get.scoop.sh') }
+- ps: if (Get-Command scoop -errorAction SilentlyContinue) { echo "Scoop already installed, skipping." } else { iex (new-object net.webclient).downloadstring('https://get.scoop.sh') }
 install:
 - appveyor DownloadFile https://github.com/EA31337/MetaEditor/raw/master/metaeditor64.exe
 - scoop install ruby python
