@@ -6,7 +6,7 @@ install:
 - appveyor DownloadFile https://github.com/Lexikos/AutoHotkey_L/releases/download/v1.1.30.03/AutoHotkey_1.1.30.03_setup.exe
 - appveyor DownloadFile https://web.archive.org/web/20160112133258if_/https://download.mql5.com/cdn/web/metaquotes.software.corp/mt4/mt4setup.exe?utm_campaign=www.metatrader4.com
 - AutoHotkey_1.1.30.03_setup.exe /S /D='C:\\Apps\\AHK'
-- dir C:\Apps\AHK
+- dir C:/Apps/AHK
 - scoop install ruby python
 - ps: scoop install shellcheck
 before_test:
